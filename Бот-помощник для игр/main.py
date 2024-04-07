@@ -50,7 +50,7 @@ async def start(update, context):
 
 
 async def dice(update, context):
-    await update.message.reply_text("Cтартовая клавиатура", reply_markup=dice_markup)
+    await update.message.reply_text("Клавиатура для кидания кубика", reply_markup=dice_markup)
 
 
 async def help_command(update, context):
@@ -60,7 +60,7 @@ async def help_command(update, context):
 
 async def timer(update, context):
     await update.message.reply_text(
-        "Клавиатура подана",
+        "Клавиатура для выбора таймера",
         reply_markup=timer_markup
     )
 
