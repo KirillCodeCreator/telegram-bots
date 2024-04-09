@@ -33,6 +33,8 @@ def check_poem_end(update, context):
 
 async def wait_str(update, context):
     msg_text = update.message.text
+    if msg_text == "/stop":
+        return await stop(update, context)
     if msg_text == context.chat_data["poem_lines"][-1]:
         context.chat_data["poem_lines"].pop()
         try:
